@@ -181,7 +181,7 @@ class Factory
         }
 
         // Build and return the client
-        if ($host['api_id'] !== null && $host['api_key'] !== null) {
+        if (!empty($host['api_id']) && !empty($host['api_key'])) {
             $clientBuilder->setApiKey($host['api_id'], $host['api_key']);
         }
 
